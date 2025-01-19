@@ -1,29 +1,21 @@
 package ParkingLot.src.main.java.service;
 
-import ParkingLot.src.main.java.entity.ParkingSpot;
-import ParkingLot.src.main.java.repository.SpotRepository;
+import ParkingLot.src.main.java.entity.VehicleType;
+import ParkingLot.src.main.java.factory.ParkingFactory;
+import ParkingLot.src.main.java.strategy.ParkingStrategy;
 
 public class FloorService {
 
-    public void park(int spotId, int size){
+    ParkingFactory parkingFactory = new ParkingFactory();
 
-        for (ParkingSpot spot : SpotRepository.spotList) {
-            if (spot.id == spotId) {
-                spot.occupancy += size;
-                System.out.println("Vehicle Parked Successfully");
-                return;
-            }
-        }
+    public void park(int spotId, VehicleType vehicleType){
+
+        ParkingStrategy parkingStrategy = parkingFactory.getParkingStrategy(vehicleType);
+
+        parkingStrategy.park(spotId);
     }
 
     public void unPark(int spotId, int size){
-        
-        for (ParkingSpot spot : SpotRepository.spotList) {
-            if (spot.id == spotId) {
-                spot.occupancy -= size;
-                System.out.println("Vehicle Un-Parked successfully");
-                return;
-            }
-        }
+        // TODO
     }
 }

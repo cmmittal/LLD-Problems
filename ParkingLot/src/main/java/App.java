@@ -41,15 +41,38 @@ public class App {
         FloorRepository.floorList.add(floor2);
         FloorRepository.floorList.add(floor3);
 
-        SpotRepository.spotList.addAll(list1);
-        SpotRepository.spotList.addAll(list2);
-        SpotRepository.spotList.addAll(list3);
 
-
-        int spotId = parkingLot.getParking(VehicleType.CAR);
-        floorService.park(spotId, 2);
+        int spotId1 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId1, VehicleType.CAR);
 
         int spotId2 = parkingLot.getParking(VehicleType.BIKE);
-        floorService.park(spotId2, 1);
+        floorService.park(spotId2, VehicleType.BIKE);
+
+        int spotId3 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId3, VehicleType.CAR);
+
+        int spotId4 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId4, VehicleType.CAR);
+
+        int spotId5 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId5, VehicleType.CAR);
+
+        int spotId6 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId6, VehicleType.CAR);
+
+        int spotId7 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId7, VehicleType.CAR);
+
+        int spotId8 = parkingLot.getParking(VehicleType.TRUCK);
+        floorService.park(spotId8, VehicleType.TRUCK);
+
+        int spotId9 = parkingLot.getParking(VehicleType.TRUCK);
+        floorService.park(spotId9, VehicleType.TRUCK);
+
+        int spotId10 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId10, VehicleType.CAR);
+
+        int spotId11 = parkingLot.getParking(VehicleType.CAR);
+        floorService.park(spotId11, VehicleType.CAR);
     }
 }
